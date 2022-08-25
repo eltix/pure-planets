@@ -10,5 +10,5 @@ let
 in
   with import nixpkgs {};
   mkShell {
-    buildInputs = [ haskell.compiler.ghc924 cabal-install ];
+    buildInputs = [ haskell.compiler.ghc941 cabal-install haskell-language-server];
   }

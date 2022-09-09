@@ -24,11 +24,11 @@ extra-source-files:
     README.md
 
 common deps
-  build-depends:   base >= 4.17 && < 5
+  build-depends:   base >= 4.16 && < 5
 
 library lib
   import: deps
-  build-depends:   base >= 4.17 && < 5
+  build-depends:   
   hs-source-dirs:  lib
   exposed-modules: Planet
   default-extensions: OverloadedStrings

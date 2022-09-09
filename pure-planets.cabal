@@ -23,7 +23,19 @@ extra-source-files:
     CHANGELOG.md
     README.md
 
+common deps
+  build-depends:   base >= 4.17 && < 5
+
+library lib
+  import: deps
+  build-depends:   base >= 4.17 && < 5
+  hs-source-dirs:  lib
+  exposed-modules: Planet
+  default-extensions: OverloadedStrings
+  default-language: Haskell2010
+
 executable pure-planets
+    import: deps
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
@@ -31,6 +43,6 @@ executable pure-planets
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base >= 4.17
+    build-depends:    lib
     hs-source-dirs:   app
     default-language: Haskell2010
